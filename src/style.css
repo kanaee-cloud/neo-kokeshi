@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+  color: #099ffc;
+  background: transparent;
+  border: 3px solid #099ffc;
+  border-radius: 10px;
+  transition: all .50s ease;
+}
+
+.btn:hover {
+  background: #099ffc;
+  color: #100E34;
+  box-shadow: 0 8px 32px 0 #099ffc;
+  backdrop-filter: blur( 13px );
+  -webkit-backdrop-filter: blur( 13px );
+  border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+.btn-cart {
+  color: #F9D949;
+  background: transparent;
+  border: 3px solid #F9D949;
+  border-radius: 10px;
+  transition: all .50s ease;
+}
+
+.btn-cart:hover {
+  background: #F9D949;
+  color: #100E34;
+  box-shadow: 0 8px 32px 0 #F9D949;
+  backdrop-filter: blur( 13px );
+  -webkit-backdrop-filter: blur( 13px );
+  border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card-container{
+  background: #212A3E;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 30px;
+}
+
+.card{
+  padding: 10px;
+  background: #3E497A;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.cart-item{
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.nav-border{
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 30px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.icon{
+  transition: all 0.5s ease;
+}
+.icon:hover{
+  color: #099ffc;
+  transform: rotate(360deg);
+}
+
+@layer base {
+  body {
+    @apply font-secondary text-lg leading-8 text-white bg-space bg-cover;
+  }
+  .btn {
+    @apply font-tertiary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[40px] px-2 text-sm;
+  }
+  .btn-medium{
+    @apply h-[48px] w-full px-2 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base from-[#FF0000] to-[#950101] hover:from-[#950101] hover:to-[#FF0000];
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  }
+}
