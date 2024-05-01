@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import Swal from 'sweetalert2'
+import { defineStore } from 'pinia';
+import Swal from 'sweetalert2';
 
 export const useShoppingStore = defineStore('shopping', {
     state: () =>{
@@ -80,7 +80,9 @@ export const useShoppingStore = defineStore('shopping', {
 
                 
             ],
-            cartItems: []
+            cartItems: [],
+            searchQuery: '',
+            searching :[]
         }
     },
     getters: {
@@ -89,7 +91,11 @@ export const useShoppingStore = defineStore('shopping', {
         },
         getCartItems(){
             return this.cartItems;
+        },
+        buyingTotal(){
+            return this.cartItems.reduce((total,item)=> total+(item.price*item.quantity),0)
         }
+
     },
     actions : {
         addToCart(item) {
@@ -158,6 +164,14 @@ export const useShoppingStore = defineStore('shopping', {
                 imageHeight: 300,
                 imageAlt: "Custom image"
             });
+        },
+        log(){
+            console.log("yeay"); //buat cek sesuatu
+        },
+        search() {
+            this.searching = this.products.filter(item =>
+                item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
         }
     }
 })

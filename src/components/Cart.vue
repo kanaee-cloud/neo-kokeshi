@@ -55,6 +55,8 @@
         </div>
       </div>
     </div>
+    <h1 v-if="data.cartItems.length != 0" class="text-2xl flex justify-end">Total : {{data.buyingTotal}}</h1>
+    <h1 v-if="data.cartItems.length == 0" class="mt-5 text-2xl flex align-middle justify-center">Nooo... You haven't put anything here</h1>
   </div>
 </template>
 <script setup>

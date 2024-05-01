@@ -9,7 +9,7 @@
           <img src="../assets/neo-kokeshi2.png" alt="" width="60" />
         </a>
         <div class="nav-border flex ml-10 px-4 gap-x-5 lg:static justify-between">
-          <button @click="isSearchVisible = true">
+          <button @click="isSearchVisible = !isSearchVisible">
             <Icon icon="bi:search" :style="{ fontSize: 23 }" class="icon" />
           </button>
           <input
@@ -21,6 +21,7 @@
               'fade-in': isSearchVisible,
               'fade-out': !isSearchVisible,
             }"
+            v-model="data.searchQuery" @input="data.search"
           />
           <button>
             <router-link to="/cart"><Icon icon="mdi:cart" :style="{ fontSize: 24 }" class="icon"/></router-link>
