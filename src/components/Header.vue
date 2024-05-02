@@ -34,13 +34,13 @@
         </div>
       </div>
     </div>
-        <p class="text-sm dropdown-text fade-in flex justify-end" v-if="isDropdownVisible" >There is {{ data.countCartItems }} item in your cart</p>
+        <p class="max-w-content text-sm dropdown-text fade-in flex justify-end" v-if="isDropdownVisible" >There is {{ data.countCartItems }} item type in your cart with {{data.totalCartQuantity}} total quantity</p>
   </header>
 </template>
 <script setup>
-import { useShoppingStore } from '../stores'
 import { Icon } from "@iconify/vue";
 import { ref } from "vue";
+import { useShoppingStore } from '../stores';
 const isSearchVisible = ref(false);
 const isDropdownVisible = ref(false);
 const data = useShoppingStore();

@@ -89,6 +89,9 @@ export const useShoppingStore = defineStore('shopping', {
         countCartItems(){
             return this.cartItems.length;
         },
+        totalCartQuantity(){
+            return this.cartItems.reduce((totalQty,item)=> totalQty+item.quantity,0);
+        },
         getCartItems(){
             return this.cartItems;
         },
@@ -101,16 +104,18 @@ export const useShoppingStore = defineStore('shopping', {
         addToCart(item) {
             let index = this.cartItems.findIndex(product => product.id === item.id);
             if(index !== -1){
-                this.products[index].quantity += 1;
+                console.log(index)
+                this.cartItems[index].quantity += 1;
                 Swal.fire({
                     title: "Yeay!",
-                    text: "Your Item has been saved",
+                    text: "Your Item has been added",
                     imageUrl: "https://i.pinimg.com/originals/17/3f/6e/173f6e2c27e4821abdf5d81054d91572.gif",
                     imageWidth: 400,
                     imageHeight: 200,
                     imageAlt: "Custom image"
                 });
             } else{
+                console.log(index)
                 item.quantity = 1;
                 this.cartItems.push(item);
                 Swal.fire({
