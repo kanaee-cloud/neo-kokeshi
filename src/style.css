@@ -37,7 +37,7 @@
 }
 
 .card-container{
-  background: #212A3E;
+  background:rgb(15 23 42);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
@@ -72,12 +72,25 @@
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.swiper-container{
+  background:rgb(15 23 42);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 .icon{
   transition: all 0.5s ease;
 }
 .icon:hover{
   color: #099ffc;
   transform: rotate(360deg);
+}
+
+.red{
+  background-color: red;
 }
 
 @layer base {

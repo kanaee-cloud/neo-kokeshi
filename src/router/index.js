@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../components/Home.vue'
-import Cart from '../components/Cart.vue'
+import Home from '../views/Home.vue'
+import Cart from '../views/Cart.vue'
 
 const router = createRouter({
     history: createWebHashHistory(),

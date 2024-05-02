@@ -1,6 +1,6 @@
 <template>
   <header class="py-8">
-    <div class="container mx-auto">
+    <div class="container">
       <div class="flex justify-between items-center">
         <a
           href="/"
@@ -8,41 +8,45 @@
         >
           <img src="../assets/neo-kokeshi2.png" alt="" width="60" />
         </a>
-        <div class="nav-border flex ml-10 px-4 gap-x-5 lg:static justify-between">
+        <div
+          class="nav-border flex ml-10 px-4 py-2 gap-x-5 lg:static justify-between"
+        >
           <button @click="isSearchVisible = !isSearchVisible">
             <Icon icon="bi:search" :style="{ fontSize: 23 }" class="icon" />
           </button>
           <input
             type="text"
-            class="bg-transparent border opacity-60 rounded-lg border-gray-600 p-1 px-2 placeholder:text-[0.9rem] w-32 lg:w-52"
+            class="bg-transparent border opacity-60 rounded-lg border-none p-1 px-2 placeholder:text-[0.9rem] w-32 h-5 lg:w-52"
             placeholder="Search Product"
             v-if="isSearchVisible"
             :class="{
               'fade-in': isSearchVisible,
               'fade-out': !isSearchVisible,
             }"
-            v-model="data.searchQuery" @input="data.search"
+            v-model="data.searchQuery"
+            @input="data.search"
           />
+          <router-link to="/cart">
+            <button class="flex items-center">
+              <Icon icon="mdi:cart" :style="{ fontSize: 24 }" class="icon" />
+              <p v-if="data.countCartItems >= 1" class="red text-xs relative p-[2px] top-[-9px] left-[-5px] rounded-2xl">
+                {{ data.countCartItems }}
+              </p>
+            </button>
+          </router-link>
           <button>
-            <router-link to="/cart"><Icon icon="mdi:cart" :style="{ fontSize: 24 }" class="icon"/></router-link>
+            <Icon icon="mdi:hamburger-menu" :style="{ fontSize: 24}"/>
           </button>
-          <div class="dropdown-menu">
-            <button @click="isDropdownVisible = !isDropdownVisible">
-            <Icon icon="mingcute:down-line" :style="{ fontSize: 23 }" class="mt-2"/>
-          </button>
-          </div>
         </div>
       </div>
     </div>
-        <p class="max-w-content text-sm dropdown-text fade-in flex justify-end" v-if="isDropdownVisible" >There is {{ data.countCartItems }} item type in your cart with {{data.totalCartQuantity}} total quantity</p>
   </header>
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
 import { ref } from "vue";
-import { useShoppingStore } from '../stores';
+import { useShoppingStore } from "../stores";
 const isSearchVisible = ref(false);
-const isDropdownVisible = ref(false);
 const data = useShoppingStore();
 </script>
 <style scoped>

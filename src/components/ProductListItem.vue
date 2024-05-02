@@ -1,5 +1,5 @@
 <template>
-  <div class="card m-5">
+  <div class="card m-3">
     <img
       :src="product.image"
       alt=""
