@@ -89,7 +89,7 @@ export const useShoppingStore = defineStore('shopping', {
                 
             ],
             cartItems: [],
-            detail:'',
+            selectedItem:'',
             searchQuery: '',
             searching :[]
         }
@@ -180,7 +180,7 @@ export const useShoppingStore = defineStore('shopping', {
             });
         },
         log(){
-            console.log(this.detail.length); //buat cek sesuatu
+            console.log(this.selectedItem.id); //buat cek sesuatu
         },
         search() {
             this.searching = this.products.filter(item =>
@@ -188,9 +188,8 @@ export const useShoppingStore = defineStore('shopping', {
             );
         },
         detail(item){
-            this.detail = item;
-            console.log(this.detail.id);
-            return ;
+            this.selectedItem = item;
+            console.log(this.selectedItem);
         }
     }
 })
