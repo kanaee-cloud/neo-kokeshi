@@ -7,7 +7,9 @@
     />
     <hr class="opacity-30" />
     <div class="spec mt-2 flex justify-between">
-      <h1 class="text-[0.9rem]">{{ product.name }}</h1>
+      <router-link to="/detail" @click="data.detail(product)">
+        <h1 class="text-[0.9rem]">{{ product.name }}</h1>
+      </router-link>
       <button class="btn-cart btn-sm" @click="data.addToCart(product)">
         <Icon icon="mdi:cart" :style="{ fontSize: 20 }" />
       </button>
@@ -29,8 +31,8 @@
 </template>
 
 <script setup>
-import { useShoppingStore } from "../stores";
 import { Icon } from "@iconify/vue";
+import { useShoppingStore } from "../stores";
 
 const props = defineProps({
   product: {
