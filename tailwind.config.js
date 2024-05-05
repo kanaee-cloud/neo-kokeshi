@@ -5,6 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,vue}",
   ],
   theme: {
+    fontWeight: {
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+    },
     fontFamily: {
       primary: 'Poppins',
       secondary: 'Poppins',
@@ -29,6 +37,7 @@ export default {
       },
       backgroundImage: {
         space: 'linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bgComing.gif)',
+        landing: 'linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bgLanding.jpg)',
       }
     },
   },

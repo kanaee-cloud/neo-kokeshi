@@ -19,6 +19,24 @@
   -webkit-backdrop-filter: blur( 13px );
   border: 3px solid rgba( 255, 255, 255, 0.18 );
 }
+
+.btn-shop:hover {
+  color: #099ffc;
+  background: transparent;
+  border: 3px solid #099ffc;
+  border-radius: 10px;
+  transition: all .50s ease;
+}
+
+.btn-shop {
+  background: #099ffc;
+  color: #100E34;
+  box-shadow: 0 8px 32px 0 #099ffc;
+  backdrop-filter: blur( 13px );
+  -webkit-backdrop-filter: blur( 13px );
+  border: 3px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 20px;
+}
 .btn-cart {
   color: #F9D949;
   background: transparent;
@@ -45,10 +63,18 @@
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 30px;
 }
+.landing-container{
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 30px;
+}
 
 .card{
   padding: 10px;
-  background: #3E497A;
+  background: #21325E;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
@@ -73,6 +99,14 @@
 }
 
 .swiper-container{
+  background:rgb(15 23 42);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.detail-container{
   background:rgb(15 23 42);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );

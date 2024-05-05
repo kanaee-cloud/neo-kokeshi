@@ -1,4 +1,10 @@
 <template>
+  <Starting 
+  v-if ="!data.searchQuery"
+  />
+   <Ads 
+    v-if ="!data.searchQuery"
+    />
   <div class="card-container justify-around flex flex-wrap">
     <ProductListItem
     v-if ="data.searchQuery"
@@ -16,6 +22,8 @@
 </template>
 <script setup>
 import ProductListItem from "./ProductListItem.vue";
+import Ads from "./Ads.vue";
+import Starting from "./Starting.vue";
 import { useShoppingStore } from "../stores";
 
 const data = useShoppingStore();

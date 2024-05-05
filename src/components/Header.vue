@@ -1,6 +1,6 @@
 <template>
   <header class="py-8">
-    <div class="container">
+    <div class="container py-8 fixed top-0 z-50">
       <div class="flex justify-between items-center">
         <a
           href="/"
@@ -48,6 +48,8 @@ import { ref } from "vue";
 import { useShoppingStore } from "../stores";
 const isSearchVisible = ref(false);
 const data = useShoppingStore();
+
+
 </script>
 <style scoped>
 .fade-in {
@@ -75,4 +77,6 @@ const data = useShoppingStore();
     opacity: 0;
   }
 }
+
+
 </style>

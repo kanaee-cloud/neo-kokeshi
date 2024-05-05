@@ -1,6 +1,7 @@
 <template>
-        <Ads />
-    <ProductList />
+    <div class="mt-10">
+        <ProductList />
+    </div>
 </template>
 <script setup>
     import Ads from '../components/Ads.vue'
