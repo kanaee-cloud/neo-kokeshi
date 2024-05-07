@@ -37,12 +37,12 @@
               <p class="text-xs opacity-30">(From 5.875 user)</p>
             </div>
             <div class="flex">
-                <Icon
-            icon="mdi:location"
-            :style="{ fontSize: 30 }"
-            style="color: #ffea00"
-          />
-          <p class="items-center">{{ data.selectedItem.location }}</p>
+              <Icon
+                icon="mdi:location"
+                :style="{ fontSize: 30 }"
+                style="color: #ffea00"
+              />
+              <p class="items-center">{{ data.selectedItem.location }}</p>
             </div>
           </div>
         </div>

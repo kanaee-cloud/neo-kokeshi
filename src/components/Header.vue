@@ -29,13 +29,16 @@
           <router-link to="/cart">
             <button class="flex items-center">
               <Icon icon="mdi:cart" :style="{ fontSize: 24 }" class="icon" />
-              <p v-if="data.countCartItems >= 1" class="red text-xs relative p-[2px] top-[-9px] left-[-5px] rounded-2xl">
+              <p
+                v-if="data.countCartItems >= 1"
+                class="red text-xs relative p-[2px] top-[-9px] left-[-5px] rounded-2xl"
+              >
                 {{ data.countCartItems }}
               </p>
             </button>
           </router-link>
           <button>
-            <Icon icon="mdi:hamburger-menu" :style="{ fontSize: 24}"/>
+            <Icon icon="mdi:hamburger-menu" :style="{ fontSize: 24 }" />
           </button>
         </div>
       </div>
@@ -48,8 +51,6 @@ import { ref } from "vue";
 import { useShoppingStore } from "../stores";
 const isSearchVisible = ref(false);
 const data = useShoppingStore();
-
-
 </script>
 <style scoped>
 .fade-in {
@@ -77,6 +78,4 @@ const data = useShoppingStore();
     opacity: 0;
   }
 }
-
-
 </style>

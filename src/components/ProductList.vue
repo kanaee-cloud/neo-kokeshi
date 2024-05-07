@@ -1,19 +1,15 @@
 <template>
-  <Starting 
-  v-if ="!data.searchQuery"
-  />
-   <Ads 
-    v-if ="!data.searchQuery"
-    />
+  <Starting v-if="!data.searchQuery" />
+  <Ads v-if="!data.searchQuery" />
   <div class="card-container justify-around flex flex-wrap">
     <ProductListItem
-    v-if ="data.searchQuery"
+      v-if="data.searchQuery"
       v-for="product in data.searching"
       :key="product.id"
       :product="product"
     />
     <ProductListItem
-    v-if ="!data.searchQuery"
+      v-if="!data.searchQuery"
       v-for="product in data.products"
       :key="product.id"
       :product="product"

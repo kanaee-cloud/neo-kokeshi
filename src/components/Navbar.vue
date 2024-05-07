@@ -1,8 +1,4 @@
 <template>
-    <div>
-        this is navbar
-    </div>
+  <div>this is navbar</div>
 </template>
-<script setup>
-    
-</script>
+<script setup></script>

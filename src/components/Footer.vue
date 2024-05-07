@@ -1,8 +1,4 @@
 <template>
-    <div>
-     this is footer   
-    </div>
+  <div>this is footer</div>
 </template>
-<script>
-    
-</script>
+<script></script>
