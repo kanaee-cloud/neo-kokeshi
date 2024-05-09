@@ -72,8 +72,7 @@
         />
         <div class="mt-5 flex justify-between">
           <h1 class="text-xl font-normal items-center pt-2">
-            Frieren :
-            <span class="font-medium text-accent"> Sousou no Frieren</span>
+            Frieren 
           </h1>
           <button class="btn btn-cart py-1 px-4">Buy Now!</button>
         </div>

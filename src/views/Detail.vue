@@ -5,14 +5,14 @@
         <img
           :src="data.selectedItem.image"
           alt=""
-          class="w-[73vh] lg:w-full h-full lg:h-[70vh] mb-1 object-cover rounded-md"
+          class="w-[50vh] lg:w-full h-full lg:h-[70vh] mb-1 object-cover rounded-md"
         />
       </div>
       <div class="mt-4 lg:mt-0 rounded-md py-10 p-8">
         <p class="text-accent">
           {{ data.selectedItem.anime }}
         </p>
-        <h1 class="text-4xl font-semibold pb-4" style="color: #f9d949">
+        <h1 class="lg:text-4xl font-semibold pb-4" style="color: #f9d949">
           {{ data.selectedItem.name }}
         </h1>
         <hr class="opacity-30" />

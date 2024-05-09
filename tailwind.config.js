@@ -33,7 +33,9 @@ export default {
       },
       backgroundImage: {
         space:
-          "linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bgComing.gif)",
+          "linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bg2.jpg)",
+        responsive:
+          "linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bg-responsive.jpg)",
         landing:
           "linear-gradient(153deg, rgba(0,0,0,0.8295693277310925) 0%, rgba(0,0,0,0.4150035014005602) 100%),url(./assets/bgLanding.jpg)",
       },

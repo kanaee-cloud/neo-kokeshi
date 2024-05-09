@@ -101,6 +101,30 @@ export const useShoppingStore = defineStore("shopping", {
           description:
             'Immerse yourself in the thrilling world of volleyball with Kuro & Kenma from the adrenaline-fueled anime <strong class="text-accent">Haikyuu</strong>. This figure set perfectly encapsulates the dynamic duo\'s camaraderie.',
         },
+        {
+          id: 9,
+          name: "Levi Ackerman",
+          price: "500",
+          anime: "Attack on Titan",
+          rate: "4.95",
+          image:
+            "https://i.pinimg.com/564x/4b/05/be/4b05beddcfc35cb5619718854c60671e.jpg",
+          location: "Tokyo, Japan",
+          description:
+            'Immerse yourself in the thrilling world of volleyball with Kuro & Kenma from the adrenaline-fueled anime <strong class="text-accent">Haikyuu</strong>. This figure set perfectly encapsulates the dynamic duo\'s camaraderie.',
+        },
+        {
+          id: 10,
+          name: "Izuku Midoriya",
+          price: "350",
+          anime: "My Hero Academia",
+          rate: "4.75",
+          image:
+            "https://i.pinimg.com/564x/a3/8a/47/a38a47e8232d2cca7ee8465c7ad77cb3.jpg",
+          location: "Tokyo, Japan",
+          description:
+            'Immerse yourself in the thrilling world of volleyball with Kuro & Kenma from the adrenaline-fueled anime <strong class="text-accent">Haikyuu</strong>. This figure set perfectly encapsulates the dynamic duo\'s camaraderie.',
+        },
       ],
       cartItems: [],
       selectedItem: "",

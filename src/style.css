@@ -128,7 +128,7 @@
 
 @layer base {
   body {
-    @apply font-secondary text-lg leading-8 text-white bg-space bg-cover;
+    @apply font-secondary text-lg leading-8 text-white bg-responsive lg:bg-space bg-cover bg-fixed;
   }
   .btn {
     @apply font-tertiary text-white font-medium;
