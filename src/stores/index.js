@@ -136,12 +136,6 @@ export const useShoppingStore = defineStore("shopping", {
     countCartItems() {
       return this.cartItems.length;
     },
-    totalCartQuantity() {
-      return this.cartItems.reduce(
-        (totalQty, item) => totalQty + item.quantity,
-        0,
-      );
-    },
     getCartItems() {
       return this.cartItems;
     },

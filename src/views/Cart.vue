@@ -1,4 +1,12 @@
 <template>
+  <div class="justify-around flex flex-wrap min-w-full bg-red">
+    <ProductListItem
+      v-if="data.searchQuery"
+      v-for="product in data.searching"
+      :key="product.id"
+      :product="product"
+    />
+  </div>
   <div class="flex flex-col lg:flex-row gap-x-5 container mx-auto">
     <div class="card-container mt-10">
       <h1 class="text-accent font-semibold text-2xl">Your Cart</h1>
@@ -72,7 +80,7 @@
       <h1 class="text-accent font-semibold text-lg">Confirm your order</h1>
       <div v-for="item in data.getCartItems" :key="item.id" class="p-4">
         <div class="flex justify-between">
-          <h1 class="text-sm font-extralight">{{ item.name }}</h1>
+          <h1 class="text-sm font-extralight">{{ item.name }} * <strong class="text-accent">{{item.quantity}}</strong></h1>
           <p class="text-sm text-green-500 font-semibold">
             ${{ item.price * item.quantity }}
           </p>
@@ -83,11 +91,15 @@
         <h1>Total</h1>
         <h1 class="text-2xl">${{ data.buyingTotal }}</h1>
       </div>
+      <router-link to="/transaction">
+        <button class="btn-cart btn-sm w-full">Confirm</button>
+      </router-link>
     </div>
   </div>
 </template>
 <script setup>
-import { useShoppingStore } from "../stores";
 import { Icon } from "@iconify/vue";
+import ProductListItem from "../components/ProductListItem.vue";
+import { useShoppingStore } from "../stores";
 const data = useShoppingStore();
 </script>

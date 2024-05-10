@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Cart from "../views/Cart.vue";
 import Detail from "../views/Detail.vue";
 import Home from "../views/Home.vue";
+import Transaction from "../views/Transaction.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
       name: "detail",
       component: Detail,
     },
+    {
+      path: "/transaction",
+      name: "transaction",
+      component : Transaction
+    }
   ],
 });
 
