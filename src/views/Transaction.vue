@@ -28,7 +28,7 @@
 <script setup>
 import router from "../router";
 import { useShoppingStore } from "../stores";
-const i = 0;
+let i = 0;
 const data = useShoppingStore();
 console.log(data.cartItems.length);
 if(data.cartItems.length == 0){
