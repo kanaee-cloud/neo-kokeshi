@@ -130,7 +130,7 @@ export const useShoppingStore = defineStore("shopping", {
             'Immerse yourself in the thrilling world of volleyball with Kuro & Kenma from the adrenaline-fueled anime <strong class="text-accent">Haikyuu</strong>. This figure set perfectly encapsulates the dynamic duo\'s camaraderie.',
         },
       ],
-      cartItems: localCart.length != 0 ? localCart : [],
+      cartItems: localCart.length != 0 ? JSON.parse(localStorage.getItem('cart')) : [],
       selectedItem: "",
       searchQuery: "",
       searching: [],
