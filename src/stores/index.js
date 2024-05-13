@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import Swal from "sweetalert2";
-if(JSON.parse(localStorage.getItem('cart')) == null){
+if(localStorage.getItem('cart') == null){
   const isian = [];
   localStorage.setItem('cart',isian);
 }
@@ -141,6 +141,8 @@ export const useShoppingStore = defineStore("shopping", {
       return this.cartItems.length;
     },
     getCartItems() {
+      // console.log(localStorage.getItem('cart'))
+      // console.log(JSON.parse(localStorage.getItem('cart')))
       return this.cartItems;
     },
     buyingTotal() {
