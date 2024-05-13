@@ -1,5 +1,6 @@
 <script setup>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 // import Navbar from './components/Navbar.vue';
 </script>
 
@@ -8,7 +9,9 @@ import Header from "./components/Header.vue";
     <Header />
     <!-- <Navbar  class=""/> -->
     <router-view></router-view>
+    
   </div>
+  <Footer />
 </template>
 
 <style scoped></style>

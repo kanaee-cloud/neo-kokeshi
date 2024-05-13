@@ -1,11 +1,11 @@
 <template>
-    <div class="container mt-10 bg-white bg-opacity-95 p-2">
-        <table class= "border-black text-opacity-90 border-4 text-black w-full ">
+    <div class="container mt-10  bg-opacity-95 p-2">
+        <table class= "border-accent card-container text-opacity-90 border-4 text-white w-full ">
             <thead>
-                <th colspan="5" class="text-right text-black text-opacity-75">Transction ID : A22</th>
+                <th colspan="5" class="text-right text-white text-opacity-75">Transaction ID : A22</th>
             </thead>
             <thead>
-                <th>#</th>
+                <th>No</th>
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
