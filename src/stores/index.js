@@ -1,6 +1,10 @@
 import { defineStore } from "pinia";
 import Swal from "sweetalert2";
-
+if(localStorage.getItem('cart') == null){
+  const isian = [];
+  localStorage.setItem('cart',isian);
+}
+const localCart = localStorage.getItem('cart');
 export const useShoppingStore = defineStore("shopping", {
   state: () => {
     return {
@@ -126,7 +130,7 @@ export const useShoppingStore = defineStore("shopping", {
             'Immerse yourself in the thrilling world of volleyball with Kuro & Kenma from the adrenaline-fueled anime <strong class="text-accent">Haikyuu</strong>. This figure set perfectly encapsulates the dynamic duo\'s camaraderie.',
         },
       ],
-      cartItems: [],
+      cartItems: localCart.length != 0 ? JSON.parse(localStorage.getItem('cart')) : [],
       selectedItem: "",
       searchQuery: "",
       searching: [],
@@ -137,6 +141,8 @@ export const useShoppingStore = defineStore("shopping", {
       return this.cartItems.length;
     },
     getCartItems() {
+      // console.log(localStorage.getItem('cart'))
+      // console.log(JSON.parse(localStorage.getItem('cart')))
       return this.cartItems;
     },
     buyingTotal() {
@@ -152,6 +158,7 @@ export const useShoppingStore = defineStore("shopping", {
       if (index !== -1) {
         console.log(index);
         this.cartItems[index].quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
         Swal.fire({
           title: "Yeay!",
           text: "Your Item has been added",
@@ -165,6 +172,7 @@ export const useShoppingStore = defineStore("shopping", {
         console.log(index);
         item.quantity = 1;
         this.cartItems.push(item);
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
         Swal.fire({
           title: "Yeay!",
           text: "Your Item has been saved",
@@ -180,16 +188,19 @@ export const useShoppingStore = defineStore("shopping", {
       let index = this.cartItems.findIndex((product) => product.id === item.id);
       if (index !== -1) {
         this.cartItems[index].quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
       }
     },
     kurangQty(item) {
       let index = this.cartItems.findIndex((product) => product.id === item.id);
       if (index != -1) {
         this.cartItems[index].quantity -= 1;
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
         if (this.cartItems[index].quantity === 0) {
           this.cartItems = this.cartItems.filter(
             (product) => product.id !== item.id,
           );
+          localStorage.setItem('cart', JSON.stringify(this.cartItems));
         }
       }
     },
@@ -197,6 +208,7 @@ export const useShoppingStore = defineStore("shopping", {
       this.cartItems = this.cartItems.filter(
         (product) => product.id !== item.id,
       );
+      localStorage.setItem('cart', JSON.stringify(this.cartItems));
       Swal.fire({
         title: "Noo!",
         text: "Your item has been removed",
@@ -216,8 +228,11 @@ export const useShoppingStore = defineStore("shopping", {
       );
     },
     detail(item) {
-      this.selectedItem = item;
-      console.log(this.selectedItem);
+      localStorage.setItem('detail',JSON.stringify(item));
+      const getDetLocal = JSON.parse(localStorage.getItem('detail'));
+      this.selectedItem = getDetLocal;
+      console.log(item);
+      console.log(getDetLocal);
     },
-  },
+  }
 });

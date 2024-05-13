@@ -65,6 +65,11 @@ import router from "../router";
 import { useShoppingStore } from "../stores";
 const data = useShoppingStore();
 if (data.selectedItem.id === undefined) {
-  router.push("/");
+  const getDetLocal = JSON.parse(localStorage.getItem('detail'));
+  if(getDetLocal.id != undefined){
+    data.selectedItem = getDetLocal;
+  }else{
+    router.push("/");
+  }
 }
 </script>
