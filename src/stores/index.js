@@ -4,7 +4,7 @@ if(localStorage.getItem('cart') == null){
   const isian = [];
   localStorage.setItem('cart',isian);
 }
-const localCart = JSON.parse(localStorage.getItem('cart'));
+const localCart = localStorage.getItem('cart');
 export const useShoppingStore = defineStore("shopping", {
   state: () => {
     return {
