@@ -7,7 +7,7 @@
       <p class="text-xs opacity-40 mt-2 mb-5">
         This place make your favorite character become a toy.
       </p>
-      <button class="btn-shop py-1 px-3 flex gap-x-2 h-15 items-center text-md">
+      <button class="btn-shop py-1 px-3 flex gap-x-2 h-15 items-center text-md" @click="data.scrollProducts">
         Get Started
         <Icon icon="mdi:cart" class="items-center"></Icon>
       </button>
@@ -16,4 +16,6 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
+import { useShoppingStore } from "../stores";
+const data= useShoppingStore();
 </script>

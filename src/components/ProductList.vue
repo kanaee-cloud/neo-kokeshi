@@ -1,7 +1,7 @@
 <template>
   <Starting v-if="!data.searchQuery" />
   <Ads v-if="!data.searchQuery" />
-  <div class="justify-around flex flex-wrap">
+  <div class="justify-around flex flex-wrap" id="avaiProducts">
     <ProductListItem
       v-if="data.searchQuery"
       v-for="product in data.searching"
@@ -17,10 +17,10 @@
   </div>
 </template>
 <script setup>
-import ProductListItem from "./ProductListItem.vue";
-import Ads from "./Ads.vue";
-import Starting from "./Starting.vue";
 import { useShoppingStore } from "../stores";
+import Ads from "./Ads.vue";
+import ProductListItem from "./ProductListItem.vue";
+import Starting from "./Starting.vue";
 
 const data = useShoppingStore();
 </script>

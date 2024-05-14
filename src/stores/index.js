@@ -234,5 +234,11 @@ export const useShoppingStore = defineStore("shopping", {
       console.log(item);
       console.log(getDetLocal);
     },
+    scrollProducts(){
+      const mainProduks = document.querySelector('#avaiProducts');
+      if(mainProduks){
+        mainProduks.scrollIntoView({behavior: 'smooth'});
+      }
+    }
   }
 });
