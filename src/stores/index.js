@@ -235,7 +235,7 @@ export const useShoppingStore = defineStore("shopping", {
       console.log(getDetLocal);
     },
     scrollProducts(){
-      const mainProduks = document.querySelector('#avaiProducts');
+      const mainProduks = document.querySelector('#shop');
       if(mainProduks){
         mainProduks.scrollIntoView({behavior: 'smooth'});
       }

@@ -1,5 +1,5 @@
-<template>
-  <div class="lg:flex mb-5 gap-x-4">
+<template >
+  <div class="lg:flex mb-5 gap-x-4" id="contact">
     <div class="swiper-container lg:w-[90vh] p-0">
       <div class="swiper-image">
         <swiper

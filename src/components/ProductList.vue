@@ -1,7 +1,7 @@
 <template>
   <Starting v-if="!data.searchQuery" />
   <Ads v-if="!data.searchQuery" />
-  <div class="justify-around flex flex-wrap" id="avaiProducts">
+  <div class="justify-around flex flex-wrap" id="shop">
     <ProductListItem
       v-if="data.searchQuery"
       v-for="product in data.searching"

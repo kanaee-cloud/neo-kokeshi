@@ -104,6 +104,14 @@ th,td{
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.responsive-border {
+  background: rgb(15 23 42 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
 .swiper-container {
   background: rgb(15 23 42);
@@ -113,12 +121,22 @@ th,td{
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .detail-container {
   background: rgb(15 23 42);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav-container {
+  background: rgb(15 23 42);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 40px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -130,9 +148,22 @@ th,td{
   transform: rotate(360deg);
 }
 
-.red {
+.red{
   background-color: red;
 }
+
+.btn-active{
+  background: #099ffc;
+  color: #100e34;
+  box-shadow: 0 8px 32px 0 #099ffc;
+  font-weight: 500;
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(13px);
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 12px;
+}
+
+
 
 @layer base {
   body {
