@@ -1,5 +1,5 @@
 <template >
-  <div class="lg:flex mb-5 gap-x-4" id="contact">
+  <div class="lg:flex mb-5 gap-x-4 card-container w-full" id="about">
     <div class="swiper-container lg:w-[90vh] p-0">
       <div class="swiper-image">
         <swiper
@@ -37,44 +37,33 @@
           /></swiper-slide>
         </swiper>
       </div>
-      <div class="p-4">
-        <h1 class="text-accent font-semibold lg:text-[1.5rem]">
-          Officialy New Product Launched!
+      <div class="p-4 flex justify-between">
+        <h1 class="text-[#f9d949] font-semibold lg:text-[1.5rem]">
+         New Figure Launched!
         </h1>
-        <div class="flex flex-col lg:flex-row gap-x-12 mt-5">
-          <p class="text-sm flex flex-col">
-            Gojo & Getou <span class="opacity-30 text-xs">Jujutsu Kaisen</span>
-          </p>
-          <p class="text-sm flex flex-col">
-            Frieren <span class="opacity-30 text-xs">Sousou no frieren</span>
-          </p>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-x-10">
-          <p class="text-sm flex flex-col">
-            Kuro & Kenma<span class="opacity-30 text-xs">Haikyuu</span>
-          </p>
-          <p class="text-sm flex flex-col">
-            Makima<span class="opacity-30 text-xs">Chainsaw-man</span>
-          </p>
-        </div>
+        <button class="btn text-sm p-2 items-center" >
+          Shop now!
+        </button>
       </div>
     </div>
-    <div class="card-container mt-2 lg:mt-0">
-      <h1 class="lg:text-[2rem] font-semibold text-[#F9D949]">
-        Most Popular Product!
-      </h1>
-      <p class="text-sm font-light opacity-30">on Neo-Kokeshi</p>
-      <div class="lg:flex flex-col">
-        <img
-          src="https://i.pinimg.com/originals/b7/90/16/b790164ba98ae10425b37bc7ba1a1c90.gif"
-          alt=""
-          class="mt-5 lg:w-55 lg:h-[45vh] rounded-md"
-        />
-        <div class="mt-5 flex justify-between">
-          <h1 class="text-xl font-normal items-center pt-2">
-            Frieren 
-          </h1>
-          <button class="btn btn-cart py-1 px-4">Buy Now!</button>
+    <div class="product-container mt-2 lg:mt-0">
+      <div class="p-5">
+        <h1 class="lg:text-4xl font-semibold text-accent">What is Neo-Kokeshi?</h1>
+        
+        <div class="mt-5 lg:pr-10">
+          <hr class="opacity-30" />
+          <p class="text-justify text-sm mt-3 opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reiciendis quod hic sunt magnam debitis sequi a ipsa repellat dicta alias harum dolores eum dolor, saepe ut illum, doloribus quaerat.</p>
+          <p class="text-justify text-sm mt-3 opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veritatis sint, cupiditate blanditiis expedita ex esse laboriosam, ullam dolorum adipisci explicabo nesciunt rerum. Recusandae nisi suscipit pariatur vitae minima? Dolore.</p>
+        </div>
+        <div class="mt-10 flex gap-x-3 detail-container">
+          <img src="../assets/asuka.jpg" class="lg:w-[150px] h-[150px] rounded-l-md">
+          <div class="p-4">
+            <h1 class="text-xs text-[#f9d949] font-semibold">Asuka Langley</h1>
+            <p class="text-xs text-justify pr-5 opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <button class="btn text-sm mt-5 px-3">
+              Github
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +72,7 @@
 <script>
 // import Swiper core and required modules
 import { Autoplay, Pagination } from "swiper/modules";
-
+import { Icon } from "@iconify/vue/dist/iconify.js";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 // import { Icon } from '@iconify/vue';

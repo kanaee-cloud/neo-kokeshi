@@ -5,12 +5,12 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <Header />
+    <div class="container mx-auto">
+      <Header />
+    </div>
+    
     <!-- <Navbar  class=""/> -->
     <router-view></router-view>
-    
-  </div>
   <Footer />
 </template>
 

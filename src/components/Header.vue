@@ -12,7 +12,7 @@
          <nav class="nav-container p-4 px-5 text-sm space-x-10 items-center">
           <a href="#" :class="{ 'btn-active ' : activeSection === 'home'}" @click="navigateTo('home')">Home</a>
           <a href="#" :class="{ 'btn-active ' : activeSection === 'shop'}" @click="navigateTo('shop')">Shop</a>
-          <a href="#" :class="{ 'btn-active ' : activeSection === 'contact'}" @click="navigateTo('contact')">Contact</a>
+          <a href="#" :class="{ 'btn-active ' : activeSection === 'about'}" @click="navigateTo('about')">About</a>
          </nav>
         </div>
         <div
@@ -75,8 +75,8 @@ const navigateTo = (section) => {
   activeSection.value = section;
   if (section === 'shop') {
     document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
-  } else if (section === 'contact') {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  } else if (section === 'about') {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   } else {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
