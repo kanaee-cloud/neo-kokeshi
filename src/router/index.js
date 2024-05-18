@@ -3,6 +3,8 @@ import Cart from "../views/Cart.vue";
 import Detail from "../views/Detail.vue";
 import Home from "../views/Home.vue";
 import Transaction from "../views/Transaction.vue";
+import Product from "../views/Product.vue";
+
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -26,6 +28,11 @@ const router = createRouter({
       path: "/transaction",
       name: "transaction",
       component : Transaction
+    },
+    {
+      path: "/product",
+      name: "product",
+      component: Product
     }
   ],
 });
