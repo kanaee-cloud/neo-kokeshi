@@ -56,11 +56,12 @@
           <p class="text-justify text-sm mt-3 opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veritatis sint, cupiditate blanditiis expedita ex esse laboriosam, ullam dolorum adipisci explicabo nesciunt rerum. Recusandae nisi suscipit pariatur vitae minima? Dolore.</p>
         </div>
         <div class="mt-10 flex gap-x-3 detail-container">
-          <img src="../assets/asuka.jpg" class="lg:w-[150px] h-[150px] rounded-l-md">
+          <img src="../assets/asuka.jpg" class="lg:w-[150px] h-[150px] object-fit rounded-l-md">
           <div class="p-4">
-            <h1 class="text-xs text-[#f9d949] font-semibold">Asuka Langley</h1>
+            <h1 class="text-md text-[#f9d949] font-semibold">Asuka Langley</h1>
             <p class="text-xs text-justify pr-5 opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            <button class="btn text-sm mt-5 px-3">
+            <p class="text-xs text-justify pr-5 opacity-50 mt-5">-CEO of Neo-Kokeshi</p>
+            <button class="btn-cart text-sm mt-2 px-3">
               Github
             </button>
           </div>
