@@ -1,11 +1,12 @@
 <template>
-  <Opening />
-  <div class="w-full justify-around card-container flex flex-wrap" id="shop">
+  <Opening data-aos="fade-up"/>
+  <div class="w-full justify-around card-container flex flex-wrap mb-5" id="shop" data-aos="fade-in">
     <ProductListItem
       v-if="data.searchQuery"
       v-for="product in data.searching"
       :key="product.id"
       :product="product"
+      data-aos="fade-up"
     />
     <ProductListItem
       v-if="!data.searchQuery"
@@ -22,3 +23,6 @@ import Opening from "./Opening.vue";
 import { useShoppingStore } from "../stores";
 const data = useShoppingStore();
 </script>
+<style scoped>
+  @import "aos/dist/aos.css";
+</style>

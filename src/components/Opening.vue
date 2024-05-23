@@ -5,7 +5,7 @@
                 <h1 class="text-2xl lg:text-6xl font-semibold text-[#f9d949]">Our Product</h1>
             </div>
             <div>
-                <img src="../assets/frieren.png" class="hidden lg:flex absolute -top-16 right-0 w-[70vh] b-10 " alt="">
+                <img src="../assets/frieren.png" class="hidden lg:flex absolute -top-16 right-7 w-[68vh] b-10 rounded-l-full" alt="">
             </div>
         </div>
     </div>     
