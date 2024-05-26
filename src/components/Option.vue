@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto" id="contact">
     <h1 class="font-semibold text-4xl mx-auto items-center flex justify-center text-accent">Product Category</h1>
     <swiper 
         :effect="'coverflow'" 
