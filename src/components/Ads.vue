@@ -1,5 +1,5 @@
 <template >
-  <div class="lg:flex mb-5 gap-x-4 card-container w-full" id="about">
+  <div class="lg:flex mb-5 gap-x-4 container mx-auto w-full">
     <div class="swiper-container lg:w-[90vh] p-0">
       <div class="swiper-image">
         <swiper
@@ -46,28 +46,7 @@
         </button>
       </div>
     </div>
-    <div class="product-container mt-2 lg:mt-0">
-      <div class="p-5">
-        <h1 class="lg:text-4xl font-semibold text-accent">What is Neo-Kokeshi?</h1>
-        
-        <div class="mt-5 lg:pr-10">
-          <hr class="opacity-30" />
-          <p class="text-justify text-sm mt-3 opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reiciendis quod hic sunt magnam debitis sequi a ipsa repellat dicta alias harum dolores eum dolor, saepe ut illum, doloribus quaerat.</p>
-          <p class="text-justify text-sm mt-3 opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veritatis sint, cupiditate blanditiis expedita ex esse laboriosam, ullam dolorum adipisci explicabo nesciunt rerum. Recusandae nisi suscipit pariatur vitae minima? Dolore.</p>
-        </div>
-        <div class="mt-10 flex gap-x-3 detail-container">
-          <img src="../assets/asuka.jpg" class="lg:w-[150px] h-[150px] object-fit rounded-l-md">
-          <div class="p-4">
-            <h1 class="text-md text-[#f9d949] font-semibold">Asuka Langley</h1>
-            <p class="text-xs text-justify pr-5 opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            <p class="text-xs text-justify pr-5 opacity-50 mt-5">-CEO of Neo-Kokeshi</p>
-            <button class="btn-cart text-sm mt-2 px-3">
-              Github
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </template>
 <script>

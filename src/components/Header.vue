@@ -1,68 +1,70 @@
 <template>
-  <header class="flex">
-    <div class="hidden p-2 lg:flex flex-col justify-between nav-container lg:fixed top-0 left-0 z-50 h-screen">
-      <button class="bg-[#099ffc] p-2 mx-auto">
-        <Icon icon="solar:list-outline" :style="{ fontSize: 30 }" style="color : rgb(15 23 42)" />
-      </button>
-      <nav class=" flex flex-col px-2 text-sm gap-y-7 items-center">
-        <a href="#" :class="{ 'btn-active ': activeSection === 'home' }" @click="navigateTo('home')">
-          <Icon icon="material-symbols-light:home-outline" :style="{ fontSize: 30 }" style="color : #099ffc" />
-        </a>
-        <a href="#" :class="{ 'btn-active ': activeSection === 'about' }" @click="navigateTo('about')">
-          <Icon icon="ic:baseline-message" :style="{ fontSize: 25 }" style="color : #099ffc " />
-        </a>
-        <a href="#" :class="{ 'btn-active ': activeSection === 'contact' }" @click="navigateTo('contact')">
-          <Icon icon="mdi:information-outline" :style="{ fontSize: 25 }" style="color : #099ffc " />
-        </a>
-      </nav>
-      <div class="">
-        <hr class="opacity-30">
-      <img src="../assets/asuka.jpg" alt="" class="w-[50px] rounded-full mx-auto mt-2">
-      </div>
-       
-    </div>
+  <header class="py-8">
+
     <div class="container py-8 fixed top-0 z-50">
       <div class="flex justify-between items-center">
         <a href="/" class="font-bold font-primary text-[1rem] lg:text-[2rem] flex">
           <img src="../assets/neo-kokeshi2.png" alt="" width="60" />
         </a>
-
+        <div class="hidden p-2 lg:flex justify-between nav-container z-50 ">
+          <nav class=" flex px-5 justify-center gap-x-10 text-sm items-center">
+            <a href="#" :class="{ 'btn-active ': activeSection === 'home' }" @click="navigateTo('home')">
+              Home
+            </a>
+            <a href="#" :class="{ 'btn-active ': activeSection === 'about' }" @click="navigateTo('about')">
+              About
+            </a>
+            <a href="#" :class="{ 'btn-active ': activeSection === 'contact' }" @click="navigateTo('contact')">
+              Contact
+            </a>
+          </nav>
+        </div>
         <div class="nav-border flex  px-4 py-2 gap-x-5 lg:static justify-between">
-          <button @click="isSearchVisible = !isSearchVisible">
-            <Icon icon="bi:search" :style="{ fontSize: 23 }" class="icon" />
+          <button class="btn-follow text-sm">
+            Follow Us
           </button>
-          <input type="text"
-            class="relative bg-transparent border opacity-60 rounded-lg border-none p-1 px-2 placeholder:text-[0.9rem] w-32 h-5 lg:w-52"
-            placeholder="Search Product" v-if="isSearchVisible" :class="{
-              'fade-in': isSearchVisible,
-              'fade-out': !isSearchVisible,
-            }" v-model="data.searchQuery" @input="data.search" />
-          <router-link to="/cart">
-            <button class="flex items-center ">
-              <Icon icon="mdi:cart" :style="{ fontSize: 24 }" class="icon" />
-              <p v-if="data.countCartItems >= 1"
-                class="red text-xs relative p-[2px] top-[-9px] left-[-5px] rounded-2xl">
-                {{ data.countCartItems }}
-              </p>
-            </button>
-          </router-link>
-          <button class="lg:hidden" @click="isOpen = !isOpen">
+          <button class="lg:flex" @click="isOpen = !isOpen">
             <Icon icon="mdi:hamburger-menu" :style="{ fontSize: 25 }" />
           </button>
         </div>
       </div>
 
     </div>
-    <div class="lg:hidden responsive-nav-transition" :class="{ 'block': isOpen, 'hidden': !isOpen }">
-      <nav class="px-2 pt-2 pb-4 right-0 fixed responsive-border w-3/4 h-screen z-50">
+    <div class="flex responsive-nav-transition" :class="{ 'block': isOpen, 'hidden': !isOpen }">
+      <nav class="px-2 pt-2 pb-4 right-0 fixed card-container w-1/4 h-screen z-50">
         <Icon icon="material-symbols:close" :style="{ fontSize: 24 }" @click="isOpen = false" />
-        <a href="#" :class="{ 'block py-2 px-4 text-sm': true, 'text-blue-500': activeSection === 'home' }"
-          @click="navigateTo('home'); isMobileMenuOpen = false">Home</a>
-        <a href="#" :class="{ 'block py-2 px-4 text-sm': true, 'text-blue-500': activeSection === 'shop' }"
-          @click="navigateTo('shop'); isMobileMenuOpen = false">Shop</a>
-        <a href="#" :class="{ 'block py-2 px-4 text-sm': true, 'text-blue-500': activeSection === 'contact' }"
-          @click="navigateTo('contact'); isMobileMenuOpen = false">Contact</a>
-        <a href="#" class="block py-2 px-4 text-sm">Logout</a>
+        <div class="mt-5">
+          <router-link to="/">
+            <button class="flex items-center gap-x-2">
+              <Icon icon="ic:round-home" :style="{ fontSize: 30 }" class="icon" />
+              <p class="text-md">Home</p>
+            </button>
+          </router-link>
+        <router-link to="/product">
+            <button class="flex items-center gap-x-2">
+              <Icon icon="ant-design:product-filled" :style="{ fontSize: 30 }" class="icon" />
+              <p class="text-md">Product</p>
+            </button>
+          </router-link>
+        <router-link to="/cart">
+            <button class="flex items-center gap-x-2">
+              <Icon icon="mdi:cart" :style="{ fontSize: 30 }" class="icon" />
+              <p class="text-md">Cart</p>
+              <p v-if="data.countCartItems >= 1"
+                class="red text-sm rounded-2xl p-1 -py-1">
+                {{ data.countCartItems }}
+              </p>
+            </button>
+          </router-link>
+        <router-link to="/blank">
+            <button class="flex items-center gap-x-2">
+              <Icon icon="material-symbols:logout" :style="{ fontSize: 30 }" class="icon" />
+              <p class="text-md">Logout</p>
+            </button>
+          </router-link>
+        </div>
+        
+        
       </nav>
     </div>
 

@@ -1,9 +1,11 @@
 <template>
   <div class="mt-10" data-aos="fade-up">
+    
     <ProductList v-if="data.searchQuery" />
     <Starting v-if="!data.searchQuery" />
     <Ads v-if="!data.searchQuery" />
     <Option v-if="!data.searchQuery" />
+
   </div>
   <Footer />
 </template>

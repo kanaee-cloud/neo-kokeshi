@@ -1,12 +1,5 @@
 <template>
-  <div class="justify-around flex flex-wrap min-w-full bg-red">
-    <ProductListItem 
-      v-if="data.searchQuery" 
-      v-for="product in data.searching" 
-      :key="product.id" 
-      :product="product" />
-  </div>
-  <div v-if="!data.searchQuery" class="flex flex-col lg:flex-row gap-x-5 container mx-auto">
+  <div class="flex flex-col mt-16 lg:flex-row gap-x-5 container mx-auto">
     <div class="card-container mt-10 w-full">
       <h1 class="text-accent font-semibold text-2xl">Your Cart</h1>
       <div 
@@ -68,7 +61,6 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
-import ProductListItem from "../components/ProductListItem.vue";
 import { useShoppingStore } from "../stores";
 const data = useShoppingStore();
 </script>
